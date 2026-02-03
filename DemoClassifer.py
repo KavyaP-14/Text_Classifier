@@ -1,13 +1,3 @@
-"""
-Improved Multi-Class Text Classification System
-Features:
-- Cross-validation
-- Hyperparameter tuning
-- Enhanced preprocessing
-- Better data balancing
-- Model persistence
-- Comprehensive evaluation
-"""
 
 import pandas as pd
 import numpy as np
@@ -39,7 +29,7 @@ print("="*60)
 print("STEP 1: DATA LOADING")
 print("="*60)
 
-# Load News Data (subset for faster training)
+# Load News Data 
 news_data = fetch_20newsgroups(
     subset="train",
     categories=["rec.sport.baseball", "sci.space", "talk.politics.misc"],
@@ -127,7 +117,6 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 def clean_text(text):
-    """Enhanced text cleaning with lemmatization"""
     if not isinstance(text, str):
         return ""
     
@@ -422,4 +411,5 @@ print(f"✓ Test Accuracy: {accuracy_score(y_test, y_pred):.4f}")
 print(f"✓ Model saved to: text_classifier_model.pkl")
 print(f"✓ Confusion matrix saved to: confusion_matrix.png")
 print(f"✓ CV comparison saved to: cv_comparison.png")
+
 print("\n" + "="*60)
