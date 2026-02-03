@@ -1,8 +1,5 @@
 TEXT CLASSIFICATION MODEL
 
-RESUME PARSER USING NLP
-
-QNA MODEL USING TRANSFORMER API
 Description: Train a model to classify text into categories
 (news, spam, sentiment, etc.).
 Challenges:
